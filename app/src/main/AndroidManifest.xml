@@ -54,18 +54,17 @@
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
-<!--        <activity-->
-<!--            android:name=".ui.main.MainActivity_"-->
-<!--            android:hardwareAccelerated="true"-->
-<!--            android:label="@string/app_name"-->
-<!--            android:launchMode="singleTask"-->
-<!--            android:theme="@style/AppTheme.FullScreen">-->
-<!--        </activity>-->
+        <activity
+            android:name=".ui.main.MainActivity_"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.FullScreen">
+        </activity>
         <activity
             android:name=".external.shortcut.ShortcutActivity"
             android:taskAffinity="org.autojs.autojs.external.shortcut.ShortcutActivity"
-            android:theme="@android:style/Theme.NoDisplay"
-            android:exported="true">
+            android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -83,51 +82,51 @@
                 android:resource="@xml/provider_paths"/>
         </provider>
 
-<!--        <activity-->
-<!--            android:name=".ui.edit.EditActivity_"-->
-<!--            android:configChanges="orientation|screenSize"-->
-<!--            android:launchMode="standard"-->
-<!--            android:multiprocess="true"-->
-<!--            android:taskAffinity="org.autojs.autojs.edit"-->
-<!--            android:theme="@style/EditorTheme">-->
-<!--        </activity>-->
-<!--        <activity android:name=".ui.settings.AboutActivity_"/>-->
-<!--        <activity-->
-<!--            android:name=".ui.settings.SettingsActivity_"-->
-<!--            android:theme="@style/AppTheme.Settings"/>-->
-<!--        <activity android:name=".ui.error.ErrorReportActivity"/>-->
-<!--        <activity-->
-<!--            android:name=".external.tasker.TaskerScriptEditActivity_"-->
-<!--            android:configChanges="orientation|screenSize"-->
-<!--            />-->
-<!--        <activity android:name=".ui.edit.ViewSampleActivity"/>-->
-<!--        <activity-->
-<!--            android:name=".ui.user.LoginActivity_"-->
-<!--            android:windowSoftInputMode="adjustResize"/>-->
-<!--        <activity-->
-<!--            android:name=".ui.user.RegisterActivity_"-->
-<!--            android:windowSoftInputMode="adjustResize"/>-->
-<!--        <activity android:name=".ui.user.WebActivity_"/>-->
-<!--        <activity-->
-<!--            android:name=".ui.project.BuildActivity_"-->
-<!--            android:configChanges="orientation|screenSize"/>-->
-<!--        <activity android:name=".ui.project.ProjectConfigActivity_"/>-->
-<!--        <activity android:name=".ui.log.LogActivity_"/>-->
-<!--        <activity android:name=".ui.doc.DocumentationActivity_"/>-->
-<!--        <activity android:name=".ui.shortcut.ShortcutIconSelectActivity_"/>-->
-<!--        <activity android:name=".ui.timing.TimedTaskSettingActivity_"/>-->
-<!--        <activity-->
-<!--            android:name=".ui.shortcut.ShortcutCreateActivity"-->
-<!--            android:theme="@style/AppTheme.Transparent"/>-->
-<!--        <activity android:name=".external.widget.ScriptWidgetSettingsActivity_">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>-->
-<!--            </intent-filter>-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.CREATE_SHORTCUT"/>-->
-<!--                <category android:name="android.intent.category.DEFAULT"/>-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
+        <activity
+            android:name=".ui.edit.EditActivity_"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="standard"
+            android:multiprocess="true"
+            android:taskAffinity="org.autojs.autojs.edit"
+            android:theme="@style/EditorTheme">
+        </activity>
+        <activity android:name=".ui.settings.AboutActivity_"/>
+        <activity
+            android:name=".ui.settings.SettingsActivity_"
+            android:theme="@style/AppTheme.Settings"/>
+        <activity android:name=".ui.error.ErrorReportActivity"/>
+        <activity
+            android:name=".external.tasker.TaskerScriptEditActivity_"
+            android:configChanges="orientation|screenSize"
+            />
+        <activity android:name=".ui.edit.ViewSampleActivity"/>
+        <activity
+            android:name=".ui.user.LoginActivity_"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".ui.user.RegisterActivity_"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ui.user.WebActivity_"/>
+        <activity
+            android:name=".ui.project.BuildActivity_"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".ui.project.ProjectConfigActivity_"/>
+        <activity android:name=".ui.log.LogActivity_"/>
+        <activity android:name=".ui.doc.DocumentationActivity_"/>
+        <activity android:name=".ui.shortcut.ShortcutIconSelectActivity_"/>
+        <activity android:name=".ui.timing.TimedTaskSettingActivity_"/>
+        <activity
+            android:name=".ui.shortcut.ShortcutCreateActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+        <activity android:name=".external.widget.ScriptWidgetSettingsActivity_">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".ui.error.IssueReporterActivity"
@@ -137,14 +136,13 @@
         <service android:name=".external.foreground.ForegroundService"/>
         <service android:name=".external.ScriptExecutionIntentService"/>
 
-<!--        <activity android:name=".external.tasker.TaskPrefEditActivity_"/>-->
+        <activity android:name=".external.tasker.TaskPrefEditActivity_"/>
 
         <service
             android:name=".external.tile.LayoutBoundsTile"
             android:icon="@drawable/ic_circular_menu_bounds"
             android:label="@string/text_inspect_layout_bounds"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <meta-data
                 android:name="android.service.quicksettings.ACTIVE_TILE"
                 android:value="false"/>
@@ -157,8 +155,7 @@
             android:name=".external.tile.LayoutHierarchyTile"
             android:icon="@drawable/ic_circular_menu_hierarchy"
             android:label="@string/text_inspect_layout_hierarchy"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
 
             <meta-data
                 android:name="android.service.quicksettings.ACTIVE_TILE"
@@ -168,20 +165,19 @@
             </intent-filter>
         </service>
 
-<!--        <activity-alias-->
-<!--            android:name=".external.tasker.PluginActivity"-->
-<!--            android:exported="true"-->
-<!--            android:icon="@drawable/ic_android_eat_js"-->
-<!--            android:label="@string/app_name"-->
-<!--            android:targetActivity=".external.tasker.TaskPrefEditActivity_"-->
-<!--            tools:ignore="ExportedActivity">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING"/>-->
-<!--            </intent-filter>-->
-<!--        </activity-alias>-->
+        <activity-alias
+            android:name=".external.tasker.PluginActivity"
+            android:exported="true"
+            android:icon="@drawable/ic_android_eat_js"
+            android:label="@string/app_name"
+            android:targetActivity=".external.tasker.TaskPrefEditActivity_"
+            tools:ignore="ExportedActivity">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING"/>
+            </intent-filter>
+        </activity-alias>
 
-        <receiver android:name="org.autojs.autojs.external.receiver.StaticBroadcastReceiver"
-            android:exported="true">
+        <receiver android:name="org.autojs.autojs.external.receiver.StaticBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
                 <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
@@ -233,8 +229,7 @@
         <activity
             android:name=".external.open.EditIntentActivity"
             android:icon="@drawable/autojs_material"
-            android:label="@string/text_edit_script"
-            android:exported="true">
+            android:label="@string/text_edit_script">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <action android:name="android.intent.action.EDIT"/>
@@ -253,8 +248,7 @@
             android:icon="@drawable/autojs_material"
             android:label="@string/text_run_script"
             android:taskAffinity="org.autojs.autojs.external.open.RunIntentActivity"
-            android:theme="@android:style/Theme.NoDisplay"
-            android:exported="true">
+            android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <action android:name="android.intent.action.EDIT"/>
@@ -272,8 +266,7 @@
             android:name=".external.open.ImportIntentActivity"
             android:icon="@drawable/autojs_material"
             android:label="@string/text_import_script"
-            android:theme="@style/AppTheme.Transparent"
-            android:exported="true">
+            android:theme="@style/AppTheme.Transparent">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <action android:name="android.intent.action.EDIT"/>
@@ -291,15 +284,13 @@
         <service
             android:name="com.stardust.notification.NotificationListenerService"
             android:label="@string/app_name"
-            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
-            android:exported="true">
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService"/>
             </intent-filter>
         </service>
 
-        <receiver android:name=".external.widget.ScriptWidget"
-            android:exported="true">
+        <receiver android:name=".external.widget.ScriptWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
@@ -309,8 +300,7 @@
                 android:resource="@xml/script_widget_config"/>
         </receiver>
 
-        <receiver android:name=".timing.TaskReceiver"
-            android:exported="true">
+        <receiver android:name=".timing.TaskReceiver">
             <intent-filter>
                 <action android:name="com.stardust.autojs.action.task"/>
             </intent-filter>
