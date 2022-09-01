@@ -1,4 +1,4 @@
-import groovy.json.JsonSlurper
+//import groovy.json.JsonSlurper
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
@@ -9,9 +9,9 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.6.4'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-rc2'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.3'
 
     }
 }
@@ -32,5 +32,13 @@ task clean(type: Delete) {
 }
 
 ext {
-    versions = new JsonSlurper().parse(file('./project-versions.json'))
+//    versions = new JsonSlurper().parse(file('./project-versions.json'))
+    android = [
+            compileSdkVersion: 31,
+            buildToolsVersion: "31.0.0",
+            minSdkVersion    : 21,
+            targetSdkVersion : 31,
+            versionCode      : 461,
+            versionName      : "4.1.1 Alpha2"
+    ]
 }

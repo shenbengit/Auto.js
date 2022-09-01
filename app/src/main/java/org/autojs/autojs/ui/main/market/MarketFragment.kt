@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.ThemeColorRecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.stardust.autojs.workground.WrapContentLinearLayoutManager
-import kotlinx.android.synthetic.main.fragment_market.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -19,12 +19,15 @@ import org.autojs.autojs.network.TopicService
 import org.autojs.autojs.network.entity.topic.AppInfo
 import org.autojs.autojs.network.entity.topic.Post
 import org.autojs.autojs.network.entity.topic.Topic
+import org.autojs.autojs.theme.widget.ThemeColorSwipeRefreshLayout
 import org.autojs.autojs.ui.main.ViewPagerFragment
 import org.autojs.autojs.ui.widget.AvatarView
 import org.joda.time.format.DateTimeFormat
 
 class MarketFragment : ViewPagerFragment(0) {
 
+    private lateinit var swipeRefreshLayout:ThemeColorSwipeRefreshLayout
+    private lateinit var topicsView: ThemeColorRecyclerView
     private val mTopics = ArrayList<Topic>()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -33,6 +36,8 @@ class MarketFragment : ViewPagerFragment(0) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        swipeRefreshLayout = view.findViewById(R.id.swipeRefreshLayout)
+        topicsView = view.findViewById(R.id.topicsView)
         topicsView.layoutManager = WrapContentLinearLayoutManager(context)
         topicsView.adapter = Adapter()
         swipeRefreshLayout.setOnRefreshListener {

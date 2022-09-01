@@ -4,12 +4,15 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
+import android.widget.ImageView
 import android.widget.LinearLayout
-import kotlinx.android.synthetic.main.image_text.view.*
+import android.widget.TextView
 import org.autojs.autojs.R
 
 class ImageText : LinearLayout {
 
+    private lateinit var textView: TextView
+    private lateinit var imageView: ImageView
     var text: CharSequence?
         get() = textView.text
         set(value) {
