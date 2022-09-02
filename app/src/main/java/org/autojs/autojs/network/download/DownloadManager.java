@@ -4,12 +4,10 @@ import android.content.Context;
 import android.util.Log;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import com.stardust.concurrent.VolatileBox;
 import com.stardust.pio.PFiles;
 
 import org.autojs.autojs.R;
-import org.autojs.autojs.model.script.ScriptFile;
 import org.autojs.autojs.network.NodeBB;
 import org.autojs.autojs.network.api.DownloadApi;
 import org.autojs.autojs.tool.SimpleObserver;
@@ -18,7 +16,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.SocketTimeoutException;
 import java.net.URLDecoder;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -31,6 +28,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 /**
  * Created by Stardust on 2017/10/20.

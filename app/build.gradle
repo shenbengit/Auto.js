@@ -4,6 +4,8 @@ apply plugin: 'kotlin-kapt'
 //apply plugin: 'kotlin-parcelize'
 //apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.jakewharton.butterknife'
+//codelocator
+//apply plugin: 'me.ele.lancet'
 
 def AAVersion = '4.8.0'
 def SupportLibVersion = '28.0.0'
@@ -154,8 +156,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
-    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
     //Glide
     implementation('com.github.bumptech.glide:glide:4.13.1', {
         exclude group: 'com.android.support'
@@ -179,4 +180,12 @@ dependencies {
     implementation project(':automator')
     implementation project(':common')
     implementation project(':autojs')
+
+    compileOnly 'me.ele:lancet-base:1.0.6'
+    // 依赖androidx, 已升级AndroidX的项目集成下面的依赖
+    implementation "com.bytedance.tools.codelocator:codelocator-core:2.0.0"
+    // 两种依赖方式
+    // 依赖lancet-all, 则包含所有lancet能力
+    debugImplementation "com.bytedance.tools.codelocator:codelocator-lancet-all:2.0.0"
+//    implementation 'com.bytedance.tools.lancet:lancet-plugin-asm6:1.0.0'
 }
